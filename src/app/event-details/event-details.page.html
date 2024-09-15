@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ event.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="name" name="name" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input [(ngModel)]="surname" name="surname" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input [(ngModel)]="age" name="age" type="number" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad de Entradas</ion-label>
+      <ion-input [(ngModel)]="tickets" name="tickets" type="number" required></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="goToCheckout()">Comprar</ion-button>
+  </form>
+</ion-content>
